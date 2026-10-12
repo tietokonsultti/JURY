@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ArrowRight, Menu, X } from 'lucide-react'
+import { ArrowRight, BadgePercent, FileText, Menu, UsersRound, X } from 'lucide-react'
 import { boardGroups } from './data/boardMembers'
 import { contactMethods } from './data/contactMethods'
 
@@ -64,6 +64,7 @@ function App() {
           <a href="#alku">Etusivu</a>
           <a href="#yhdistys">Yhdistys</a>
           <a href="#lajiyhdistykset">Lajiyhdistykset</a>
+          <a href="#jasenedut">Jäsenedut</a>
           <a
             href={membershipApplicationUrl}
             target="_blank"
@@ -119,7 +120,7 @@ function App() {
                 </p>
                 <a
                   className="external-link"
-                  href="https://suomenurheilijat.fi/"
+                  href="https://suomenurheilijat.yhdistysavain.fi/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -140,6 +141,43 @@ function App() {
                 <li className="sport-item" key={sport}>{sport}</li>
               ))}
             </ul>
+          </section>
+
+          <section className="benefits-section content-width" id="jasenedut">
+            <p className="eyebrow">JÄSENYYS</p>
+            <h2>Jäsenedut</h2>
+            <p className="section-lead">
+              Joukkueurheilijat ry jäsenenä saat käyttöösi etuja, asiantuntijatukea ja urheilijoiden yhteisön.
+            </p>
+            <div className="benefits-grid">
+              <article className="benefit-card benefit-featured">
+                <div className="benefit-heading">
+                  <BadgePercent className="benefit-icon" size={24} aria-hidden="true" />
+                  <span className="benefit-badge">Noin 60 % etu</span>
+                </div>
+                <h3>Ruutu+ Urheilu Premium</h3>
+                <p>
+                  Jäsenenä saat etukoodin, jolla voit tilata Ruutu+ Urheilu Premiumin 12 kuukaudeksi jäsenhintaan.
+                </p>
+                <div className="benefit-pricing">
+                  <strong>119 € <span>/ 12 kk</span></strong>
+                  <span className="benefit-normal-price">Normaalihinta <s>287,88 € / 12 kk</s></span>
+                  <span className="benefit-savings">Säästät 168,88 €</span>
+                </div>
+              </article>
+              <article className="benefit-card">
+                <FileText className="benefit-icon" size={24} aria-hidden="true" />
+                <h3>Lakikonsultaatio</h3>
+                <p>Saat tukea pelaajasopimuksiin ja muihin sopimuskysymyksiin.</p>
+              </article>
+              <article className="benefit-card">
+                <UsersRound className="benefit-icon" size={24} aria-hidden="true" />
+                <h3>Urheilijaverkosto</h3>
+                <p>
+                  Pääset osaksi kattavaa urheilijaverkostoa, josta saat vertaistukea ja apua matalalla kynnyksellä.
+                </p>
+              </article>
+            </div>
           </section>
 
           <section className="board-section" id="hallitus">
